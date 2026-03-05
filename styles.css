@@ -261,3 +261,8 @@
     font-size: 0.85rem;
     margin-top: 2rem;
   }
+
+  .navbar__logo-img {
+    height: 28px;
+    display: block;
+  }

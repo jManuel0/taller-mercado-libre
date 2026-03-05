@@ -1,0 +1,263 @@
+/* Estilos base */
+:root {
+    --ml-yellow: #fff159;
+    --ml-blue: #3483fa;
+    --ml-dark: #333333;
+    --ml-gray: #f5f5f5;
+    --ml-border: #e3e3e3;
+    --ml-white: #ffffff;
+    --ml-success: #00a650;
+    --ml-text-muted: #666666;
+    --ml-radius: 10px;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--ml-gray);
+    color: var(--ml-dark);
+    line-height: 1.5;
+  }
+  
+  /* Layout general */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+  }
+  
+  .section {
+    margin-top: 2.5rem;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--ml-yellow);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar__logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  
+  .navbar__brand {
+    color: var(--ml-dark);
+  }
+  
+  .navbar__search {
+    flex: 1;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .navbar__search input {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    border: 1px solid var(--ml-border);
+    font-size: 0.9rem;
+  }
+  
+  .navbar__search button {
+    padding: 0.5rem 0.9rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--ml-blue);
+    color: var(--ml-white);
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .navbar__search button:hover {
+    background-color: #2968c8;
+  }
+  
+  .navbar__links {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .navbar__links a {
+    font-size: 0.9rem;
+    color: var(--ml-dark);
+    text-decoration: none;
+  }
+  
+  .navbar__links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #f9ffce, #ffffff);
+    border-radius: var(--ml-radius);
+    margin-top: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  .hero__content {
+    max-width: 520px;
+  }
+  
+  .hero__content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero__content p {
+    font-size: 0.98rem;
+    color: var(--ml-text-muted);
+    margin-bottom: 1.25rem;
+  }
+  
+  .hero__cta {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--ml-blue);
+    color: var(--ml-white);
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .hero__cta:hover {
+    background-color: #2968c8;
+  }
+  
+  /* GRID DE TARJETAS */
+  .card-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .card-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .card-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  
+  /* Tarjetas genéricas */
+  .card {
+    background-color: var(--ml-white);
+    border-radius: var(--ml-radius);
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--ml-border);
+  }
+  
+  /* Productos */
+  .producto-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .producto-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .precio {
+    color: var(--ml-success);
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+  }
+  
+  /* Servicios */
+  .servicio-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+  }
+  
+  /* Portafolios */
+  .portafolios .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  
+  .portfolio-card {
+    text-align: center;
+  }
+  
+  .portfolio-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.8rem;
+  }
+  
+  .portfolio-role {
+    font-size: 0.9rem;
+    color: var(--ml-text-muted);
+    margin-bottom: 0.75rem;
+  }
+  
+  .portfolio-description {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .portfolio-list {
+    list-style: disc;
+    padding-left: 1.2rem;
+    text-align: left;
+    margin: 0.3rem 0 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .portfolio-tech {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+  }
+  
+  .portfolio-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--ml-blue);
+    color: var(--ml-blue);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .portfolio-link:hover {
+    background-color: var(--ml-blue);
+    color: var(--ml-white);
+  }
+  
+  /* FOOTER */
+  .footer {
+    background-color: var(--ml-dark);
+    color: var(--ml-white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    margin-top: 2rem;
+  }
